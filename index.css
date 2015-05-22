@@ -1,0 +1,49 @@
+body{
+  background-color: #FFFCF0;
+}
+
+
+main{
+  background-color: #FAEBE8;
+  padding: 0.5em;
+}
+
+/*Page-wide General Containers*/
+
+.container{
+  background-color: gray;
+  padding: 2em;
+}
+
+/*Form Header*/
+
+h1.user-form-header{
+  color: #FFFCF0;
+}
+
+/*User Input Form*/
+
+.user-form{
+  background-color: beige;
+  padding: 0.5em;
+}
+
+/*All Input Text Fields*/
+
+.text-field{
+  font-family:
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*Submit Button*/
+
+.submit{
+
+}
+
+/*User List UL*/
+
+.user-list{
+
+}
