@@ -6,11 +6,20 @@ $(function () {
   $("[name='user-form']").on('submit', function (e) {
     e.preventDefault();
 
-    var first = $("[name='first']");
-    var last = $("[name='last']");
-    var email = $("[name='email']");
+    var first = $("[name='first']").val();
+    var last = $("[name='last']").val();
+    var email = $("[name='email']").val();
 
-    app.userList.add(first.val(), last.val(), email.val());
+    if(first === "") {
+      return alert("Please enter first name.");
+    }
+    if(last === "") {
+      return alert("Please enter last name.");
+    }
+    if(email === "") {
+      return alert("Please enter email.");
+    }
+    app.userList.add(first, last, email);
     app.renderUsers(app.userList.all);
 
     $("[name='user-form']").trigger("reset");
@@ -23,6 +32,18 @@ $(function () {
     var index = li.data('index');
 
     app.userList.remove(index);
+    app.renderUsers(app.userList.all);
+
+  });
+
+  $("[name='alphabetical']").change(function() {
+
+    if($(this).find('option:selected').val() === "A-Z"){
+      app.userList.alphabetizeAZ();
+    }else if($(this).find('option:selected').val() === "Z-A"){
+      app.userList.alphabetizeZA();
+    };
+
     app.renderUsers(app.userList.all);
 
   });

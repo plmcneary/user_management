@@ -12,6 +12,37 @@ app.userList = {
     this.save();
   },
 
+  alphabetizeAZ: function() {
+    this.all.sort(function(a, b){
+      if (a.last > b.last) {
+        return 1;
+      }
+      if (a.last < b.last) {
+        return -1;
+      }
+      if (a.first > b.first) {
+        return 1;
+      }
+      if (a.first < b.first) {
+        return -1
+      }
+      if (a.email > b.email) {
+        return 1;
+      }
+      if (a.email < b.email) {
+        return -1;
+      }
+      return 0;
+    });
+    this.save();
+  },
+
+  alphabetizeZA: function() {
+    this.alphabetizeAZ();
+    this.all.reverse();
+    this.save();
+  },
+
   load: function () {
     this.all = JSON.parse(localStorage.getItem('userList')) || [];
   },

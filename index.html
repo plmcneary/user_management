@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>User Management</title>
-
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -18,9 +17,15 @@
         </form>
       </div>
       <div class="container list-container">
+        <div name="menu">
+          <select name="alphabetical">
+            <option name="alpha" value="A-Z">A-Z</option>
+            <option name="zeta" value="Z-A">Z-A</option>
+          </select>
+          <input name="user-search" type="search" placeholder="search">
+        </div>
         <ul class="user" name="user-list">
         </ul>
-      </div>
     </main>
     <script src="jquery-2.1.4.min.js"></script>
     <script src="app.js"></script>

@@ -1,39 +1,58 @@
 body{
-  background-color: #FFFCF0;
+  background-color: #A2D7D8;
 }
 
 
 main{
-  background-color: #FAEBE8;
+  background-color: #FCD059;
+  border-radius: 10px;
   padding: 0.5em;
 }
 
 /*Page-wide General Containers*/
 
 .container{
-  background-color: gray;
-  padding: 2em;
+  background-color: #C0E0C0;
+  border-style: double;
+  border-width: 10px;
+  border-color: #DE5842;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em;
+}
+
+/*Form Container*/
+
+.form-container{
+  width: 220px;
 }
 
 /*Form Header*/
 
 h1.user-form-header{
-  color: #FFFCF0;
+  color: #DE5842;
 }
 
 /*User Input Form*/
 
 .user-form{
-  background-color: beige;
+  background-color: #EDEDEA;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #DE5842;
+  border-radius: 10px;
   padding: 0.5em;
+  width: 180px;
 }
 
 /*All Input Text Fields*/
 
 .text-field{
+  position: relative;
   font-family:
   font-style: normal;
   font-weight: 100;
+  margin: auto;
 }
 
 /*Submit Button*/
@@ -42,8 +61,20 @@ h1.user-form-header{
 
 }
 
+/*User List Container*/
+
+.list-container{
+  width: 300px;
+}
+
 /*User List UL*/
 
 .user-list{
 
+}
+
+/*Individual User*/
+
+.user{
+  background-color: #FFFCF0;
 }
