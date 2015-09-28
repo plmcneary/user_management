@@ -1,0 +1,158 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url('../assets/trainbg.jpeg');
+  background-size: cover;
+}
+
+h1 {
+  font-size: 42px;
+  color: #E8DDBD;
+  padding-bottom: 0.3em;
+}
+
+/*Page-wide General Containers*/
+
+.container {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E8DDBD;
+  padding: 1.3em;
+  margin: 4em 6em;
+}
+
+.overlay {
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*Form*/
+
+.form-container {
+  position: relative;
+  float: left;
+}
+
+.user-form {
+}
+
+.text-field {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 0.3em;
+  margin-bottom: 0.7em;
+  border-style: inset;
+  border-width: 3px;
+  width: 220px;
+  outline: none;
+}
+
+.submit {
+  color: #A9A9A9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: white;
+  border-style: outset;
+  outline: none;
+  margin-top: 0.5em;
+}
+
+.submit:active {
+  color: white;
+  background-color: #A9A9A9;
+  border-style: inset;
+  outline: none;
+}
+
+/*User List*/
+
+.list-container {
+  position: relative;
+  float: right;
+}
+
+.list-filter {
+  margin-bottom: 1em;
+}
+
+.select {
+  color: #A9A9A9;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  border-style: outset;
+  border-width: 3px;
+  padding: 0.3em;
+  outline: none;
+}
+
+.select:active {
+  border-style: inset;
+  padding: 0.3em;
+  outline: none;
+}
+
+.search {
+  font-family: 'Roboto', sans-serif;
+  border-style: inset;
+  border-width: 3px;
+  padding: 0.3em;
+  margin-left: 1em;
+  width: 200px;
+  outline: none;
+}
+
+.search:active {
+  outline: none;
+}
+
+.user-list {
+  width: 400px;
+}
+
+.user{
+  color: #A9A9A9;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 3px;
+  background-color: white;
+  padding: 0.5em;
+  margin: 0.9em 0em;
+  position: relative;
+}
+
+.user-name {
+  font-size: 20px;
+}
+
+.user-email {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.remove-user {
+  color: #A9A9A9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: white;
+  outline: none;
+  position: absolute;
+  margin-left: 1em;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -40%);
+}
+
+.remove-user:active {
+  outline: none;
+}

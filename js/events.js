@@ -1,6 +1,7 @@
 $(function () {
 
   app.userList.load();
+  app.userList.alphabetizeAZ();
   app.renderUsers(app.userList.all);
 
   $("[name='user-form']").on('submit', function (e) {
@@ -47,5 +48,12 @@ $(function () {
     app.renderUsers(app.userList.all);
 
   });
+
+  $("[name='user-search']").keyup(function() {
+
+    var searchq = this.value;
+    app.renderUsers(app.userList.search(searchq));
+
+  })
 
 });

@@ -14,22 +14,25 @@ app.userList = {
 
   alphabetizeAZ: function() {
     this.all.sort(function(a, b){
-      if (a.last > b.last) {
+      var aLast = a.last.toLowerCase(), bLast = b.last.toLowerCase();
+      var aFirst = a.first.toLowerCase(), bFirst = b.first.toLowerCase();
+      var aEmail = a.email.toLowerCase(), bEmail = b.email.toLowerCase();
+      if (aLast > bLast) {
         return 1;
       }
-      if (a.last < b.last) {
+      if (aLast < bLast) {
         return -1;
       }
-      if (a.first > b.first) {
+      if (aFirst > bFirst) {
         return 1;
       }
-      if (a.first < b.first) {
+      if (aFirst < bFirst) {
         return -1
       }
-      if (a.email > b.email) {
+      if (aEmail > bEmail) {
         return 1;
       }
-      if (a.email < b.email) {
+      if (aEmail < bEmail) {
         return -1;
       }
       return 0;
@@ -41,6 +44,18 @@ app.userList = {
     this.alphabetizeAZ();
     this.all.reverse();
     this.save();
+  },
+
+  search: function(searchq) {
+    var searchRes = this.all.filter(function(a) {
+      var userString = a.first+a.last+a.email;
+      if(userString.indexOf(searchq) === -1) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    return searchRes;
   },
 
   load: function () {

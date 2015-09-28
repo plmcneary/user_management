@@ -3,35 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>User Management</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="assets/normal_folder.png">
   </head>
   <body>
-    <main>
-      <div class="container form-container">
-        <h1 class="user-form-header">Add User Form</h1>
-        <form class="user-form" name="user-form">
-          <input class="text-field" type="text" name="first" placeholder="First Name"><br>
-          <input class="text-field" type="text" name="last" placeholder="Last Name"><br>
-          <input class="text-field" type="email" name="email" placeholder="email"><br>
-          <button class="submit" name="submit">Submit</button>
-        </form>
+
+    <div class="container form-container">
+      <div class="overlay"></div>
+      <form class="user-form" name="user-form">
+        <h1 class="user-form-header">Add User</h1>
+        <input class="text-field" type="text" name="first" placeholder="First Name"><br>
+        <input class="text-field" type="text" name="last" placeholder="Last Name"><br>
+        <input class="text-field" type="email" name="email" placeholder="Email"><br>
+        <button class="submit" name="submit">Submit</button>
+      </form>
+    </div>
+    <div class="container list-container">
+      <div class="overlay"></div>
+      <h1>User List</h1>
+      <div name="menu" class="list-filter">
+        <select name="alphabetical" class="select">
+          <option name="alpha" value="A-Z">A-Z</option>
+          <option name="zeta" value="Z-A">Z-A</option>
+        </select>
+        <input name="user-search" class="search" type="search" placeholder="Search Users">
       </div>
-      <div class="container list-container">
-        <div name="menu">
-          <select name="alphabetical">
-            <option name="alpha" value="A-Z">A-Z</option>
-            <option name="zeta" value="Z-A">Z-A</option>
-          </select>
-          <input name="user-search" type="search" placeholder="search">
-        </div>
-        <ul class="user" name="user-list">
-        </ul>
-    </main>
-    <script src="jquery-2.1.4.min.js"></script>
-    <script src="app.js"></script>
-    <script src="create_user.js"></script>
-    <script src="user_list.js"></script>
-    <script src="render_user_list.js"></script>
-    <script src="events.js"></script>
+      <ul class="user-list" name="user-list">
+      </ul>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/create_user.js"></script>
+    <script src="js/user_list.js"></script>
+    <script src="js/render_user_list.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>
